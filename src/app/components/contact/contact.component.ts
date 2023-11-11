@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
   contactGroup = new FormGroup({
     email: new FormControl('',[Validators.required,Validators.email]),
-    password: new FormControl(''),
+    password: new FormControl('',[Validators.required]),
     address: new FormControl(''),
     address2: new FormControl(''),
     city: new FormControl(''),
@@ -24,7 +24,10 @@ export class ContactComponent implements OnInit {
 
   createContact(form:FormGroup){
     console.log(form);
-
-
   }
+
+  get contactControls() {
+    return this.contactGroup.controls;
+  }
+
 }

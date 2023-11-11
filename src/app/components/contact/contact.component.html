@@ -1,69 +1,124 @@
-
 <div class="container">
   <div class="page-wrapper">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-6">
-          <form class="row g-3" [formGroup]="contactGroup" (ngSubmit)="createContact(contactGroup)">
+          <form
+            class="row g-3"
+            [formGroup]="contactGroup"
+            (ngSubmit)="createContact(contactGroup)"
+          >
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email"
-              formControlName="email"
-              class="form-control"
-              [class.is-valid]="contactGroup.get('email')?.valid && contactGroup.get('email')?.touched"
-              [class.is-invalid]="contactGroup.get('email')?.invalid && contactGroup.get('email')?.touched"
-              id="inputEmail4">
-
+              <input
+                type="email"
+                formControlName="email"
+                class="form-control"
+                [class.is-valid]="
+                  contactGroup.get('email')?.valid &&
+                  contactGroup.get('email')?.touched
+                "
+                [class.is-invalid]="
+                  contactGroup.get('email')?.invalid &&
+                  contactGroup.get('email')?.touched
+                "
+                id="inputEmail4"
+              />
             </div>
             <div class="col-md-6">
               <label for="inputPassword4" class="form-label">Password</label>
-              <input type="password" formControlName="password" class="form-control" id="inputPassword4">
+              <input
+                type="password"
+                formControlName="password"
+                [class.is-invalid]="contactControls.password.invalid && contactControls.password.touched"
+                [class.is-valid]="contactControls.password.valid && contactControls.password.touched"
+                class="form-control"
+                id="inputPassword4"
+              />
             </div>
             <div class="col-12">
               <label for="inputAddress" class="form-label">Address</label>
-              <input type="text" formControlName="address"  class="form-control" id="inputAddress" placeholder="1234 Main St">
+              <input
+                type="text"
+                formControlName="address"
+                class="form-control"
+                id="inputAddress"
+                placeholder="1234 Main St"
+              />
             </div>
             <div class="col-12">
               <label for="inputAddress2" class="form-label">Address 2</label>
-              <input type="text" formControlName="address2" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              <input
+                type="text"
+                formControlName="address2"
+                class="form-control"
+                id="inputAddress2"
+                placeholder="Apartment, studio, or floor"
+              />
             </div>
             <div class="col-md-6">
               <label for="inputCity" class="form-label">City</label>
-              <input type="text" formControlName="city" class="form-control" id="inputCity">
+              <input
+                type="text"
+                formControlName="city"
+                class="form-control"
+                id="inputCity"
+              />
             </div>
             <div class="col-md-4">
               <label for="inputState" class="form-label">State</label>
-              <select id="inputState" formControlName="state" class="form-select">
+              <select
+                id="inputState"
+                formControlName="state"
+                class="form-select"
+              >
                 <option>Odisha</option>
                 <option>AP</option>
               </select>
             </div>
             <div class="col-md-2">
               <label for="inputZip" class="form-label">Zip</label>
-              <input type="text" formControlName="zip" class="form-control" id="inputZip">
+              <input
+                type="text"
+                formControlName="zip"
+                class="form-control"
+                id="inputZip"
+              />
             </div>
             <div class="col-12">
               <div class="form-check">
-                <input class="form-check-input" formControlName="checkout" type="checkbox" id="gridCheck">
+                <input
+                  class="form-check-input"
+                  formControlName="checkout"
+                  type="checkbox"
+                  id="gridCheck"
+                />
                 <label class="form-check-label" for="gridCheck">
                   Check me out
                 </label>
               </div>
             </div>
             <div class="col-12">
-              <button type="submit" [disabled]="contactGroup.invalid" class="btn btn-primary">Sign in</button>
+              <button
+                type="submit"
+                [disabled]="contactGroup.invalid"
+                class="btn btn-primary"
+              >
+                Sign in
+              </button>
             </div>
           </form>
         </div>
         <div class="col-6">
-          <h3 class="display-5 text-primary text-center ">JSON DATA</h3>
+          <h3 class="display-5 text-primary text-center">JSON DATA</h3>
           <pre>
-            {{contactGroup.value|json}}
+            {{ contactGroup.value | json }}
+          </pre>
+          <pre>
+            hi
           </pre>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
