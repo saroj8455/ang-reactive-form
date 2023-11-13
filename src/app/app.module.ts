@@ -10,7 +10,9 @@ import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
-import { ErrorPageComponent } from './components/error-page/error-page.component'
+import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FormArrayDemoComponent } from './components/form-array-demo/form-array-demo.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
     AboutComponent,
     ServicesComponent,
     ContactComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    NavbarComponent,
+    FormArrayDemoComponent
   ],
   imports: [
     BrowserModule,

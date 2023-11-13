@@ -14,7 +14,7 @@ body {
   line-height: 1.6;
 }
 app-root {
-  height: 100dvh;
+  min-height: 100dvh;
 }
 
 
